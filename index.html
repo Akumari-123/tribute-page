@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tribute Page - Interactive</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: linear-gradient(to right, #f0f8ff, #e6f2ff);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: #003366;
+      color: #fff;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      animation: fadeUp 1.5s ease-in-out;
+    }
+
+    .image-section {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .image-section img {
+      max-width: 280px;
+      border-radius: 50%;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-section img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    h2 {
+      color: #003366;
+      margin-top: 20px;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: #003366;
+      margin-top: 5px;
+      border-radius: 3px;
+      animation: slideIn 1.5s ease;
+    }
+
+    p {
+      text-align: justify;
+      margin: 15px 0;
+    }
+
+    /* Timeline Section */
+    .timeline {
+      margin: 30px 0;
+      padding-left: 20px;
+      border-left: 3px solid #003366;
+    }
+
+    .timeline div {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .timeline div::before {
+      content: "•";
+      position: absolute;
+      left: -25px;
+      top: 0;
+      font-size: 1.5rem;
+      color: #003366;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .timeline div:hover::before {
+      transform: scale(1.3);
+      color: #ff9800;
+    }
+
+    .quote {
+      margin: 30px 0;
+      padding: 20px;
+      background: #003366;
+      color: #fff;
+      font-style: italic;
+      border-radius: 10px;
+      text-align: center;
+      animation: pulse 3s infinite;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #003366;
+      color: #fff;
+      margin-top: 30px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { width: 0; }
+      to { width: 50px; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 10px #00c3ff; }
+      50% { box-shadow: 0 0 25px #00c3ff; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tribute to Dr. A.P.J. Abdul Kalam</h1>
+    <p>"The Missile Man of India and People's President"</p>
+  </header>
+
+  <div class="container">
+    <div class="image-section">
+      <img src="image.png" alt="Dr. APJ Abdul Kalam">
+    </div>
+
+    <h2>Why I Admire Him</h2>
+    <p>
+      Dr. A.P.J. Abdul Kalam was not only a brilliant scientist but also a humble and inspiring leader.
+      His journey from a small town boy to becoming the 11th President of India is a story of determination,
+      hard work, and service to the nation.  
+    </p>
+
+    <h2>His Contributions</h2>
+    <p>
+      Known as the "Missile Man of India," he played a key role in India's missile development and nuclear
+      program. Beyond science, he believed in empowering youth and emphasized the importance of education,
+      innovation, and dreaming big. His books, especially *Wings of Fire*, continue to inspire millions.
+    </p>
+
+    <h2>Major Milestones</h2>
+    <div class="timeline">
+      <div><strong>1969:</strong> Joined ISRO and worked on India’s first satellite launch vehicle (SLV-III).</div>
+      <div><strong>1980:</strong> SLV-III successfully deployed Rohini satellite in orbit.</div>
+      <div><strong>1998:</strong> Played a pivotal role in India’s Pokhran-II nuclear tests.</div>
+      <div><strong>2002-2007:</strong> Served as the 11th President of India.</div>
+      <div><strong>2015:</strong> Passed away while inspiring students with his speech at IIM Shillong.</div>
+    </div>
+
+    <div class="quote">
+      "Dream, dream, dream. Dreams transform into thoughts and thoughts result in action."
+    </div>
+  </div>
+
+  <footer>
+    Created with ❤️ as a tribute to Dr. A.P.J. Abdul Kalam
+  </footer>
+
+</body>
+</html>
